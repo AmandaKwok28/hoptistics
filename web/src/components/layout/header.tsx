@@ -7,8 +7,8 @@ const Header = () => {
                 { 
                     backgroundColor: '#6495ED', 
                     color: 'white', 
-                    padding: '2rem',   
-                    fontSize: '2rem',  
+                    padding: '3rem',   
+                    fontSize: '3rem',  
                     fontWeight: 'bold', 
                     borderBottom: '1px solid #ccc' ,
                     fontFamily: 'Roboto, Arial, sans-serif'
