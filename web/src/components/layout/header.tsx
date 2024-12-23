@@ -1,5 +1,5 @@
 
-import { openPage, redirectPage } from "@nanostores/router";
+import { openPage } from "@nanostores/router";
 import { $router } from "../../lib/router";
 
 const Header = () => {
@@ -24,7 +24,7 @@ const Header = () => {
                 style={{
                     cursor: "pointer"
                 }}
-                onClick={() => redirectPage($router, "home")}
+                onClick={() => openPage($router, "home")}
             >
                 Hoptistics
             </div>
@@ -37,12 +37,12 @@ const Header = () => {
                 }}
             >
                 <div
-                    onClick={() => redirectPage($router, "info")}
+                    onClick={() => openPage($router, "info")}
                 >
                     Info
                 </div>
                 <div
-                    onClick={() => redirectPage($router, "feedback")}
+                    onClick={() => openPage($router, "feedback")}
                 >
                     Feedback
                 </div>

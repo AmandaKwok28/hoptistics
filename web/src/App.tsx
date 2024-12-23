@@ -3,14 +3,14 @@ import Feed from "./components/layout/feed";
 import { $router } from "./lib/router";
 import { useStore } from '@nanostores/react';
 import Info from "./components/pages/info";
-import { redirectPage } from "@nanostores/router";
+import { openPage } from "@nanostores/router";
 import Feedback from "./components/pages/feedback";
 
 function App() {
   const page = useStore($router)
 
   if (!page) {
-    redirectPage($router, "home");
+    openPage($router, "home");
   }
 
   return (
