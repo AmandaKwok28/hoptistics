@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Button } from "../ui/button";
 import { Command, CommandGroup, CommandItem, CommandList } from "../ui/command";
@@ -11,13 +11,21 @@ const DropDown = ({
   opts,
   defaultVal,
   width = 300,
+  val,
+  onChange,
 }: { 
   opts: options[],
   defaultVal: string,
   width?: number,
+  val: string,
+  onChange: (value: string) => void;
 }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
+
+  useEffect(() => {
+    setValue(val);
+  }, [val]);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -58,7 +66,9 @@ const DropDown = ({
                   value={option.value}
                   style={{fontSize: "1.25rem"}}
                   onSelect={(currentValue) => {
+                    const newValue = currentValue === value ? "" : currentValue;
                     setValue(currentValue === value ? "" : currentValue);
+                    onChange(newValue);
                     setOpen(false);
                   }}
                 >

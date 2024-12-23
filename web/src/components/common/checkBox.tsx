@@ -2,9 +2,13 @@ import { Checkbox } from "../ui/checkbox";
 
 
 const CheckBox = ({
-    title
+    title,
+    value,
+    onChange,
 }: {
-    title:string
+    title:string,
+    value:boolean,
+    onChange: (value: boolean) => void;
 }) => {
     return (
         <div 
@@ -14,8 +18,10 @@ const CheckBox = ({
             space-x-2"
         >
         <Checkbox 
+            checked={value}
             id={title} 
             className="w-7 h-7"
+            onClick={() => onChange(!value)}
         />
         <label
             htmlFor={title}
