@@ -8,7 +8,7 @@ const Feedback = () => {
           className="flex items-center justify-center min-h-dvh"
           style={{fontSize: "3rem"}}
         >
-          Feedback
+          Why are you here? Our app is perfect. Get out.
         </div>
       </div>
     );

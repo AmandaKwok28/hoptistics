@@ -13,27 +13,27 @@ const Header = () => {
                     backgroundColor: '#6495ED', 
                     color: 'white', 
                     padding: '3rem',   
-                    fontSize: '3rem',  
+                    fontSize: '5rem',  
                     fontWeight: 'bold', 
                     borderBottom: '1px solid #ccc' ,
-                    fontFamily: 'Roboto, Arial, sans-serif',
+                    fontFamily: 'outfit, Arial, sans-serif',
                 }
             }
         >
             <div
                 style={{
-                    cursor: "pointer"
+                    cursor: "pointer",
                 }}
                 onClick={() => openPage($router, "home")}
             >
                 Hoptistics
             </div>
             <div
-                className="absolute right-10 flex flex-row space-x-4"
+                className="absolute right-24 flex flex-row space-x-4"
                 style={{
-                    fontSize: "2rem",
+                    fontSize: "2.5rem",
                     fontWeight: "bold",
-                    cursor: "pointer"
+                    cursor: "pointer",
                 }}
             >
                 <div
