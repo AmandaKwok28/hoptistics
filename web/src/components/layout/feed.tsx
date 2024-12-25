@@ -15,7 +15,7 @@ const Feed = () => {
             <UserInput />
 
             <img
-                src="jayBlueJay.jpg"
+                src="noBgBlueJay.png"
                 alt="Blue Jay mascot"
                 className="absolute bottom-0 left-0"
                 style={{ width: '500px', height: '500px' }}
